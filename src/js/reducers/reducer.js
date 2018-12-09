@@ -32,10 +32,10 @@ function todosReducer(state = [], action) {
 }
 
 // reducer for the visibility filter...
-function visibilityFilterReducer(state = "SHOW_ALL", action) {
+function visibilityFilterReducer(state = "ALL", action) {
   switch (action.type) {
     case Action.SET_VISIBILITY_FILTER:
-      return action.type;
+      return action.filter;
       break;
 
     default:

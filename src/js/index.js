@@ -24,14 +24,22 @@ function removeTodo(id) {
   store.dispatch(Action.removeTodoAction(id));
 }
 
+// function to filter the todos based on visibility filter selected...
+function filterTodos(filter){
+  store.dispatch(Action.setVisibiliyFilterAction(filter));
+}
+
 // function to be invoked everytime the store state changes...
 function render() {
+  const {todos, visibilityFilter} = store.getState();
   ReactDOM.render(
     <TodosApp
-      todos={store.getState().todos}
+      todos={todos}
       addTodo={addTodo}
       toggleTodo={toggleTodo}
       removeTodo={removeTodo}
+      currentFilter={visibilityFilter}
+      filterTodos={filterTodos}
     />,
     document.querySelector("#app")
   );

@@ -10,7 +10,7 @@ class AddTodoForm extends React.Component {
   render() {
     return (
       <div id="controls">
-      <input type="text" id="todo-input" ref={node => (this.input = node)} />
+      <input type="text" autoFocus id="todo-input" placeholder='Enter todo to add' ref={node => (this.input = node)} />
       <button
         className="btn btn-add"
         onClick={() => {
