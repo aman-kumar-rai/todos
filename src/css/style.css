@@ -1,0 +1,103 @@
+*{
+  margin-left: 0px;
+  margin-right: 0px;
+  box-sizing: border-box;
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+}
+
+
+body{
+  margin: 0px;
+  padding: 5px;
+  border: 2px solid salmon;
+}
+
+/* style for the root component and its children */
+div#app{
+  /* flex-container part... */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* style for the div#controls and its children... */
+div#controls{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* style for the input field for adding new todo */
+#todo-input{
+  border: 1px solid gray;
+  width: 80%;
+
+  border-radius: 10px;
+
+  font-size: 1em;
+}
+
+/* style common for all button */
+.btn{
+  font-size: 1.5em;
+
+  padding: 5px;
+  border-radius: 5px;
+
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* style for the add-todo button */
+.btn-add{
+  background-color: rgb(73, 236, 73);
+}
+
+
+/* style for the ul#todos-list and its children... */
+ul#todos-list{
+  padding-left: 0px;
+  list-style-type: none;
+
+  width: 100%;
+}
+
+
+/* style for todo-item and its children... */
+li.todo-item{
+  
+  font-size: 1.5em;
+  border: 2px solid grey;
+
+  margin-bottom: 3px;
+
+  /* flex-container part */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-check{
+  color: green;
+  justify-self: flex-start;
+}
+
+.todo-text{
+  color: salmon;
+  justify-self: center;
+}
+
+.todo-trash{
+  color: red;
+  justify-self: flex-end;
+}

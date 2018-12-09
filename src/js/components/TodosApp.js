@@ -1,36 +1,36 @@
-const React = require('react');
+const React = require("react");
 
-
-class TodosApp extends React.Component{
-
-  constructor(props){
+class TodosApp extends React.Component {
+  constructor(props) {
     super(props);
   }
 
-
-  render(){
+  render() {
     console.log(this.props);
     return (
       <React.Fragment>
-        <input type='text' />
-        <button>Add Todo</button>
+        <div id="controls">
+          <input type="text" id='todo-input'/>
+          <button className='btn btn-add'>Add</button>
+        </div>
 
-        <ul>
-          {
-            this.props.todos.map(todo => {
-              return (
-                <li key={todo.id}
-                  style={{
-                    textDecoration: todo.complete ? 'line-through': 'none'
-                  }}
-                >
-                  {todo.text}
-                </li>
-              )
-            })
-          }
+        <ul id="todos-list">
+          {this.props.todos.map(todo => {
+            return (
+              <li
+                key={todo.id}
+                style={{
+                  textDecoration: todo.complete ? "line-through" : "none"
+                }}
+                className="todo-item"
+              >
+                <span className="fa fa-check todo-check" />
+                <span className='todo-text'>{todo.text}</span>
+                <span className="fa fa-trash todo-trash" />
+              </li>
+            );
+          })}
         </ul>
-      
       </React.Fragment>
     );
   }
