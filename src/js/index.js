@@ -15,13 +15,13 @@ function addTodo(text) {
 }
 
 // function to toggle a todo...
-function toggleTodo() {
-  console.log("toggleTodo() invoked...");
+function toggleTodo(id) {
+  store.dispatch(Action.toggleTodoAction(id));
 }
 
 // function to remove a todo...
-function removeTodo() {
-  console.log("removeTodo() invoked...");
+function removeTodo(id) {
+  store.dispatch(Action.removeTodoAction(id));
 }
 
 // function to be invoked everytime the store state changes...
