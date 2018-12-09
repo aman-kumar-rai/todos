@@ -7,13 +7,13 @@ class TodosApp extends React.Component {
 
   render() {
     
-    const {todos, addTodo, toggleTodo} = this.props;
+    const {todos, addTodo, toggleTodo, removeTodo} = this.props;
 
     return (
       <React.Fragment>
         <div id="controls">
           <input type="text" id='todo-input' ref={(node) => this.input = node}/>
-          <button className='btn btn-add' onClick={(event) => {
+          <button className='btn btn-add' onClick={() => {
             addTodo(this.input.value);
             this.input.value = '';
           }}>Add</button>
@@ -31,7 +31,7 @@ class TodosApp extends React.Component {
               >
                 <span className="fa fa-check todo-check" onClick={toggleTodo}/>
                 <span className='todo-text'>{todo.text}</span>
-                <span className="fa fa-trash todo-trash" />
+                <span className="fa fa-trash todo-trash" onClick={removeTodo}/>
               </li>
             );
           })}
