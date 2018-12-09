@@ -6,16 +6,21 @@ class TodosApp extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    
+    const {todos, addTodo, toggleTodo} = this.props;
+
     return (
       <React.Fragment>
         <div id="controls">
-          <input type="text" id='todo-input'/>
-          <button className='btn btn-add'>Add</button>
+          <input type="text" id='todo-input' ref={(node) => this.input = node}/>
+          <button className='btn btn-add' onClick={(event) => {
+            addTodo(this.input.value);
+            this.input.value = '';
+          }}>Add</button>
         </div>
 
         <ul id="todos-list">
-          {this.props.todos.map(todo => {
+          {todos.map(todo => {
             return (
               <li
                 key={todo.id}
@@ -24,7 +29,7 @@ class TodosApp extends React.Component {
                 }}
                 className="todo-item"
               >
-                <span className="fa fa-check todo-check" />
+                <span className="fa fa-check todo-check" onClick={toggleTodo}/>
                 <span className='todo-text'>{todo.text}</span>
                 <span className="fa fa-trash todo-trash" />
               </li>

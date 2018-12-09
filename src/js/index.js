@@ -10,10 +10,19 @@ const reducer = require('./reducers/reducer.js');
 const store = Redux.createStore(reducer);
 
 
+// function to add a todo...
+function addTodo(){
+ console.log('control came here...');
+}
+
+// function to toggle a todo...
+function toggleTodo(){
+  console.log('toggleTodo() invoked...');
+}
+
 // function to be invoked everytime the store state changes...
 function render(){
-  console.log('whole app rendered/re-rendered...');
-  ReactDOM.render(<TodosApp todos={store.getState().todos}/>, document.querySelector('#app'));
+  ReactDOM.render(<TodosApp todos={store.getState().todos} addTodo={addTodo} toggleTodo={toggleTodo}/>, document.querySelector('#app'));
 }
 
 

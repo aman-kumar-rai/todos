@@ -37,10 +37,9 @@ div#controls{
 /* style for the input field for adding new todo */
 #todo-input{
   border: 1px solid gray;
-  width: 80%;
+  flex-grow: 1;
 
   border-radius: 10px;
-
   font-size: 1em;
 }
 
