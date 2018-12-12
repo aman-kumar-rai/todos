@@ -10,11 +10,18 @@ html {
   height: 100%;
 }
 
+html{
+  background-color: #8eaec8;
+}
+
 body {
-  margin: 0px;
+  margin: 0px auto;
+  max-width: 800px;
   font-family: sans-serif;
   padding: 0px 3px;
   overflow-y: auto;
+
+  background-color: whitesmoke;
 }
 
 /* styles for scrollbar added to the body element... */
@@ -48,24 +55,26 @@ div#app {
   margin: 0px 5px 10px 5px;
   width: 100%;
 
-  background-color: salmon;
+  background-color: #2e3d49;
+  color: white;
 }
 
 /* style for the div#controls and its children... */
 div#controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
 /* style for the input field for adding new todo */
 #todo-input {
   flex-grow: 1;
-
+  max-width: 600px;
   text-align: center;
   font-size: 1em;
-
   box-shadow: 0px 2px 2px darkcyan;
+
+  cursor: pointer;
 }
 
 /* style common for all button */
@@ -82,6 +91,7 @@ div#controls {
 /* style for the add-todo button */
 .btn-add {
   background-color: rgb(73, 236, 73);
+  cursor: pointer;
 }
 
 /* style for div#visibility-filter-div */
@@ -99,8 +109,8 @@ div#controls {
   list-style-type: none;
   padding-left: 0px;
   width: 100%;
-
-  background-color: rgb(154, 145, 145);
+  cursor: pointer;
+  background-color: #8eaec8;
 
   /* flex-container part */
   display: flex;
@@ -153,6 +163,14 @@ li.todo-item {
   display: flex !important;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+}
+
+.todo-check:hover{
+  background-color: rgb(29, 233, 29);
+  color: white;
+  border: 3px solid grey;
 }
 
 .todo-text {
@@ -173,4 +191,12 @@ li.todo-item {
   display: flex !important;
   justify-content: center;
   align-items: center;
+  
+  cursor: pointer;
+}
+
+.todo-trash:hover{
+  background-color: rgb(221, 37, 37);
+  color: white;
+  border: 3px solid grey;
 }
