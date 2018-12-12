@@ -12,9 +12,19 @@ html {
 
 body {
   margin: 0px;
-  /* padding: 5px; */
-  /* border: 2px solid salmon; */
   font-family: sans-serif;
+  padding: 0px 3px;
+  overflow-y: auto;
+}
+
+/* styles for scrollbar added to the body element... */
+body::-webkit-scrollbar {
+  width: 4px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: dodgerblue;
 }
 
 /* style for the root component and its children */
@@ -31,6 +41,10 @@ div#app {
 /* style for h1#app-title */
 #app-title {
   text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: lowercase;
+
   margin: 0px 5px 10px 5px;
   width: 100%;
 
