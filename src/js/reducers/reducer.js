@@ -4,6 +4,23 @@ const Action = require('./../actions/actionCreator.js');
 function todosReducer(state = [], action) {
   switch (action.type) {
     case Action.ADD_TODO:
+
+      // variable to see if a todo is repeated...
+      let repeated = false;
+
+      // returning the state as it is if the todo already exist...
+      state.forEach(todo => {
+        if(todo.text == action.text){
+          repeated = true;
+          alert('Item exists already');
+        }
+      })
+
+      // returning state as it is if todo already exists...
+      if(repeated){
+        return state;
+      }
+
       return state.concat({
         id: action.id,
         text: action.text,

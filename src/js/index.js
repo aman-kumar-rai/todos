@@ -11,6 +11,14 @@ const store = Redux.createStore(reducer);
 
 // function to add a todo...
 function addTodo(text) {
+  // check to not allow empty todos...
+  if(!text.trim()){
+    return;
+  }
+
+  // we can also write a check to see if a todo with the same content already exists here...
+  
+
   store.dispatch(Action.addTodoAction(text));
 }
 
