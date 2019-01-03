@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/aman-kumar-rai/todos/issues"
   },
-  "homepage": "https://github.com/aman-kumar-rai/todos#readme",
+  "homepage": "https://aman-kumar-rai.github.io/todos",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
