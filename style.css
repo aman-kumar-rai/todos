@@ -1,0 +1,202 @@
+* {
+  margin-left: 0px;
+  margin-right: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+html{
+  background-color: #8eaec8;
+}
+
+body {
+  margin: 0px auto;
+  max-width: 800px;
+  font-family: sans-serif;
+  padding: 0px 3px;
+  overflow-y: auto;
+
+  background-color: whitesmoke;
+}
+
+/* styles for scrollbar added to the body element... */
+body::-webkit-scrollbar {
+  width: 4px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: dodgerblue;
+}
+
+/* style for the root component and its children */
+div#app {
+  /* flex-container part... */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* style for h1#app-title */
+#app-title {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: lowercase;
+
+  margin: 0px 5px 10px 5px;
+  width: 100%;
+
+  background-color: #2e3d49;
+  color: white;
+}
+
+/* style for the div#controls and its children... */
+div#controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* style for the input field for adding new todo */
+#todo-input {
+  flex-grow: 1;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1em;
+  box-shadow: 0px 2px 2px darkcyan;
+
+  cursor: pointer;
+}
+
+/* style common for all button */
+.btn {
+  font-size: 1.5em;
+
+  padding: 5px;
+  border-radius: 5px;
+
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* style for the add-todo button */
+.btn-add {
+  background-color: rgb(73, 236, 73);
+  cursor: pointer;
+}
+
+/* style for div#visibility-filter-div */
+#visibility-filter-div {
+  width: 100%;
+}
+
+/* style for p#show-text */
+#show-text {
+  display: none;
+}
+
+/* style for ul#visibility-list */
+#visibiliy-list {
+  list-style-type: none;
+  padding-left: 0px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #8eaec8;
+
+  /* flex-container part */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* style for li.visibility-list-item */
+.visibility-list-item {
+  font-size: 1em;
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+/* style for the ul#todos-list and its children... */
+ul#todos-list {
+  padding-left: 0px;
+  list-style-type: none;
+
+  width: 100%;
+}
+
+/* style for todo-item and its children... */
+li.todo-item {
+  font-size: 1em;
+  border: 1px solid grey;
+
+  padding: 5px 2px;
+
+  /* flex-container part */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-check {
+  color: rgb(29, 233, 29);
+  justify-self: flex-start;
+
+  font-size: 1.5em !important;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 24px;
+  border: 1px solid grey;
+
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.todo-check:hover{
+  background-color: rgb(29, 233, 29);
+  color: white;
+  border: 3px solid grey;
+}
+
+.todo-text {
+  justify-self: center;
+  text-align: center;
+}
+
+.todo-trash {
+  color: rgb(221, 37, 37);
+  justify-self: flex-end;
+
+  font-size: 1.5em !important;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 24px;
+  border: 1px solid grey;
+
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+}
+
+.todo-trash:hover{
+  background-color: rgb(221, 37, 37);
+  color: white;
+  border: 3px solid grey;
+}
