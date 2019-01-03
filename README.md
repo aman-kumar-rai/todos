@@ -10,10 +10,13 @@
 
 A simple app to maintain a list of thing to do. You can mark a todo as complete and once done, you can delete a todo as well. There are filters to show complete todos, incomplete todos and all todos
 
-To get started, open [the GitHub repo](https://github.com/aman-kumar-rai/todos/) and clone or fork the project, and then 
+To get started,
 
-* execute ```npm install``` to install all the dependencies
-* execute ```npm start``` to start a local dev server which will open up the app in your default web browser
+* visit [this](https://aman-kumar-rai.github.io/todos/) link and play around with the application
+* or open [the GitHub repo](https://github.com/aman-kumar-rai/todos/) and clone or fork the project, and then 
+
+  * execute ```npm install``` to install all the dependencies
+  * execute ```npm start``` to start a local dev server which will open up the app in your default web browser
 
 ## Dependencies
 
