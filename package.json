@@ -1,8 +1,8 @@
 {
-  "name": "react-setup",
+  "name": "todos",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple todo application to keep track of things to do",
+  "main": "./src/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode=development --open",
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aman-kumar-rai/react-setup.git"
+    "url": "git+https://github.com/aman-kumar-rai/todos.git"
   },
   "keywords": [],
   "author": "Aman Kumar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aman-kumar-rai/react-setup/issues"
+    "url": "https://github.com/aman-kumar-rai/todos/issues"
   },
-  "homepage": "https://github.com/aman-kumar-rai/react-setup#readme",
+  "homepage": "https://github.com/aman-kumar-rai/todos#readme",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
